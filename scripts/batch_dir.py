@@ -1,6 +1,5 @@
 import os
 import re
-from PIL import Image
 
 def save_image_dir(image, path, basename, extension='png'):
     # Ensure the directory exists

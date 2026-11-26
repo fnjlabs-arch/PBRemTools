@@ -1,3 +1,9 @@
+# BgRemover
+
+> Formerly **PBRemTools** (Precise Background Remover Tools) by mattya_monaca — cleaned and rebranded from [mattyamonaca/PBRemTools](https://github.com/mattyamonaca/PBRemTools). Original work © 2023 mattya_monaca, MIT License (see `LICENSE`).
+>
+> Powered by SadSha
+
 # Latest Updates
 Combine Segment Anything and CLIP and control the generating mask with text has been added!
 
@@ -11,16 +17,16 @@ Download the model from here (https://github.com/facebookresearch/segment-anythi
 
 This program is prepared with reference to (https://github.com/facebookresearch/segment-anything) and (https://github.com/Curt-Park/segment-anything-with-clip)
 
-# PBRemTools
-PBRemTools(Precise background remover tools) is a collection of tools to crop backgrounds from a single picture with high accuracy.
+# About
+BgRemover (Precise background remover tools) is a collection of tools to crop backgrounds from a single picture with high accuracy.
 
 - Base Image
 <img src="https://user-images.githubusercontent.com/48423148/229968165-9effdc0e-db85-41d1-bfdb-1031665af88d.png" width="30%">
 
-- PBRemTools(Tile division ABG Remover)
+- BgRemover (Tile division ABG Remover)
 <img src="https://user-images.githubusercontent.com/48423148/229968905-e3ddcb5a-9421-4139-acdb-b9e4429e21e5.png" width="30%">
 
-- PBRemTools(CascadePSP)
+- BgRemover (CascadePSP)
 <img src="https://user-images.githubusercontent.com/48423148/229969256-d9c2e93f-9767-4ab9-a900-44c4051c281d.png" width="30%">
 
 - ABG Remover

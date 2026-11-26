@@ -10,7 +10,7 @@ from scripts.convertor import pil2cv
 
 class webui:
     def __init__(self):
-        self.demo = gr.Blocks()
+        self.demo = gr.Blocks(title="BgRemover")
 
     def processing(self, input_image, td_abg_enabled, h_split, v_split, n_cluster, alpha, th_rate, cascadePSP_enabled, fast, psp_L):
         image = pil2cv(input_image)
@@ -40,6 +40,7 @@ class webui:
                             psp_L = gr.Slider(1, 2048, value=900, step=1, label="Memory usage", show_label=True)
 
                     submit = gr.Button(value="Submit")
+                    gr.Markdown("Powered by SadSha")
                 with gr.Row():
                     with gr.Column():
                         with gr.Tab("output"):

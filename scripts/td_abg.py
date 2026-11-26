@@ -1,33 +1,16 @@
 import cv2
-import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
-from sklearn.cluster import KMeans, MiniBatchKMeans
+from sklearn.cluster import MiniBatchKMeans
 
 from scripts.convertor import rgb2df, df2rgba
 
-import gradio as gr
 import huggingface_hub
 import onnxruntime as rt
-import copy
-from PIL import Image
 
 import segmentation_refinement as refine
 
-import os
-import urllib
-from functools import lru_cache
-from random import randint
-from typing import Any, Callable, Dict, List, Tuple
-
-import clip
-import cv2
-import gradio as gr
-import numpy as np
-import PIL
 import torch
-from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
-from scripts.sa_mask import  get_sa_mask
+from scripts.sa_mask import get_sa_mask
 
 
 # Declare Execution Providers
@@ -95,7 +78,6 @@ def get_foreground(img, td_abg_enabled, h_split, v_split, n_cluster, alpha, th_r
             if sa_enabled == True:     
                 mask = get_sa_mask(img, query, model_name, predicted_iou_threshold, stability_score_threshold, clip_threshold)
                 mask = cv2.resize(np.uint8(mask),(image_width,image_height))
-                print(mask.shape)
             else:
                 mask = get_mask(img)
                 mask = (mask * 255).astype(np.uint8)

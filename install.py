@@ -13,7 +13,7 @@ packages = {
 
 for name, target in packages.items():
     if not launch.is_installed(name):
-        launch.run_pip(f'install {target}', desc=f'{name} for PBRemTools')
+        launch.run_pip(f'install {target}', desc=f'{name} for BgRemover')
 
 if not launch.is_installed("segment_anything"):
-    launch.run_pip("install git+https://github.com/facebookresearch/segment-anything.git", desc="segment_anything for PBRemTools")
+    launch.run_pip("install git+https://github.com/facebookresearch/segment-anything.git", desc="segment_anything for BgRemover")

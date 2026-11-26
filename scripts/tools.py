@@ -1,12 +1,7 @@
 import os
-import io
-import json
-import numpy as np
 import cv2
-import re
 import modules.scripts as scripts
 import modules.shared as shared
-from modules import images
 
 from scripts.td_abg import get_foreground
 from scripts.convertor import pil2cv
@@ -90,7 +85,7 @@ class Script(scripts.Script):
     super().__init__()
 
   def title(self):
-    return "PBRemTools"
+    return "BgRemover"
 
   def show(self, is_img2img):
     return scripts.AlwaysVisible

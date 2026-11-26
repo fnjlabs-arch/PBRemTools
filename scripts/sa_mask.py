@@ -1,12 +1,9 @@
 import os
-import urllib
-from functools import lru_cache
 from random import randint
 from typing import Any, Callable, Dict, List, Tuple
 
 import clip
 import cv2
-import gradio as gr
 import numpy as np
 import PIL
 import torch

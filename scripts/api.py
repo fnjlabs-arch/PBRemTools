@@ -5,7 +5,7 @@ from PIL import Image
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
-from modules.api.api import  decode_base64_to_image#encode_pil_to_base64,
+from modules.api.api import decode_base64_to_image
 from scripts.tools import process_image, model_list
 import io
 import base64
@@ -47,7 +47,7 @@ def pbrem_api(_: gr.Blocks, app: FastAPI):
 
     @app.post('/pbrem/predict', description='process image', response_model=PBRRemResponse)
     async def post_pbrem_predict(payload: PBRRemRequest) -> PBRRemResponse:
-        print(f"PBRemTools API /pbrem/predict received request")
+        print("BgRemover API /pbrem/predict received request")
         input_image = decode_base64_to_image(payload.img)
         output_image, mask = process_image(
             input_image,
@@ -84,4 +84,4 @@ try:
     script_callbacks.on_app_started(pbrem_api)
 except Exception as e:
     print(e)
-    print("PBRemTools API failed to initialize")
+    print("BgRemover API failed to initialize")

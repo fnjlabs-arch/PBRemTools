@@ -4,7 +4,7 @@ from modules import script_callbacks
 import modules.shared as shared
 
 def on_ui_tabs():
-    with gr.Blocks(analytics_enabled=False) as PBRemTools:
+    with gr.Blocks(analytics_enabled=False) as BgRemover:
         input_tab_state = gr.State(value=0)
         with gr.Row():
             with gr.Column():
@@ -42,6 +42,7 @@ def on_ui_tabs():
                         psp_L = gr.Slider(1, 2048, value=900, step=1, label="Memory usage", show_label=True)
 
                 submit = gr.Button(value="Submit")
+                gr.Markdown("Powered by SadSha")
             with gr.Row():
                 with gr.Column():
                     gallery = gr.Gallery(label="outputs", show_label=True, elem_id="gallery", columns=2, object_fit="contain")
@@ -56,6 +57,6 @@ def on_ui_tabs():
             outputs=gallery
         )
 
-    return [(PBRemTools, "PBRemTools", "pbremtools")]
+    return [(BgRemover, "BgRemover", "bgremover")]
         
 script_callbacks.on_ui_tabs(on_ui_tabs)
